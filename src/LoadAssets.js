@@ -5,5 +5,6 @@ var gameResources = [
      "assets/test.png",
      "assets/test1.plist",
      "assets/test1.png",
-
+     "assets/test2.plist",
+     "assets/test2.png",
 ];

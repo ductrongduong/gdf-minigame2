@@ -18,7 +18,9 @@
         "src/**/*.js"
     ],
     "jsList": [
-        "src/gamescript.js",
-        "src/loadassets.js"
+        "src/Game.js",
+        "src/GameScene.js",
+        "src/GameSettings.js",
+        "src/LoadAssets.js"
     ]
 }
