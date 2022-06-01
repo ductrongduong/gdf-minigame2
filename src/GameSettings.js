@@ -1,12 +1,14 @@
 var fieldSize = 7;
-// var tileTypes = ["red", "green", "blue", "grey", "yellow"];
-var tileTypes = ["land", "rock", "land", "land"];
+var tileTypes = ["land", "rock", "monster"];
 var tileSize = 50;
 var tileArray = [];
 var globezLayer;
 var startColor = null;
 var visitedTiles = [];
-var tolerance = 400;
+// var tolerance = 400;
 var arrowsLayer;
 const available = new Set();
-var numberOfRock = 49;
+var numberOfRock = 7;
+var numberOfMonster = 0;
+var currentRock = 0;
+

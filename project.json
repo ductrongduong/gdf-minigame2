@@ -21,6 +21,8 @@
         "src/Game.js",
         "src/GameScene.js",
         "src/GameSettings.js",
-        "src/LoadAssets.js"
+        "src/LoadAssets.js",
+        "src/Monster.js",
+        "src/Utinity.js"
     ]
 }
