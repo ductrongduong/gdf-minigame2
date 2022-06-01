@@ -24,6 +24,7 @@ var Game = cc.Layer.extend({
                     }
                 }
                 if(putStone(locationInMatrix.row, locationInMatrix.col) && check){
+                    // console.log(JSON.stringify(locationInMatrix));
                     arrowsLayer.clear();
                     gameLayer.drawPath();
                     var childs = gameLayer.getChildren();
@@ -33,6 +34,7 @@ var Game = cc.Layer.extend({
                         }
                     }
                 }
+
             }
         },this)
 

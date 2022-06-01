@@ -8,7 +8,7 @@ var visitedTiles = [];
 // var tolerance = 400;
 var arrowsLayer;
 const available = new Set();
-var numberOfRock = 7;
+var numberOfRock = 0;
 var numberOfMonster = 0;
 var currentRock = 0;
 

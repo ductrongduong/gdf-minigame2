@@ -41,7 +41,7 @@ var Monster = cc.Sprite.extend({
         this.pathToTarget = bFSPath(vitri, {row : fieldSize - 1, col : fieldSize - 1});
         var arr = [];
 
-        for (var i = 0; i < this.pathToTarget.length; i++) {
+        for (var i = 1; i < this.pathToTarget.length; i++) {
             arr.push(cc.delayTime(0));
             // var time = (i + 1) * 0.1;
             arr.push(cc.moveTo(this.timeToRun, getBoxLocation(this.pathToTarget[i].row, this.pathToTarget[i].col)));

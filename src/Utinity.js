@@ -14,19 +14,14 @@ function findPath(start, destination) {
     stack.push([start]);
 
     while(stack.length > 0) {
-        // console.log(stack.length);
         var path = stack.pop();
-        // console.log(JSON.stringify(path));
         var current = path[path.length - 1];
-        // console.log(JSON.stringify(current));
         var locationTo1D = current.row * fieldSize + current.col;
-        // console.log(JSON.stringify(!visited.has(current)));
         if (!visited.has(locationTo1D) && tileArray[current.row][current.col].val == "land") {
             if (current.row == destination.row && current.col == destination.col){
                 return path;
             }
             visited.add(locationTo1D);
-            // console.log(JSON.stringify(current));
 
             neighbor = this.findNeighbor(current);
             for (var i in neighbor) {
@@ -36,7 +31,6 @@ function findPath(start, destination) {
                 }
                 path2.push(neighbor[i]);
                 // path.push(neighbor[i]);
-                // console.log(JSON.stringify(path[path.length - 1]));
                 stack.push(path2);
                 // path.pop();
             }
@@ -72,9 +66,10 @@ function getBox1D (box) {
 
 function putStone(row, col) {
     if (!available.has(row * fieldSize + col)) return false;
-
     let items = Array.from(available);
-    var random = row*fieldSize+col;
+    var indexTo1D = getBox1D({row: row, col: col});
+    available.delete(indexTo1D);
+
 
     tileArray[row][col].setSpriteFrame(cc.spriteFrameCache.getSpriteFrame(  "rock.png"));
     tileArray[row][col].val = "rock";
@@ -82,17 +77,14 @@ function putStone(row, col) {
 
     //optimize code find path???
     var path = findPath({row : 0, col : 0}, {row : fieldSize - 1, col : fieldSize - 1});
-    // console.log(JSON.stringify(path));
 
     if (path.length == 0) {
-        available.delete(items[random]);
         tileArray[row][col].setSpriteFrame(cc.spriteFrameCache.getSpriteFrame(  "land.png"));
         tileArray[row][col].val = "land";
         currentRock--;
         return false;
     }
     else {
-        available.delete(items[random]);
         neighbor = findNeighbor({row : row, col : col});
         for (var i in neighbor) {
             var x = this.getBox1D(neighbor[i]);
@@ -120,19 +112,14 @@ function bFSPath(start, destination) {
     queue.push([start]);
 
     while(queue.length > 0) {
-        // console.log(stack.length);
         var path = queue.shift();
-        // console.log(JSON.stringify(path));
         var current = path[path.length - 1];
-        // console.log(JSON.stringify(current));
         var locationTo1D = current.row * fieldSize + current.col;
-        // console.log(JSON.stringify(!visited.has(current)));
         if (!visited.has(locationTo1D) && tileArray[current.row][current.col].val == "land") {
             if (current.row == destination.row && current.col == destination.col){
                 return path;
             }
             visited.add(locationTo1D);
-            // console.log(JSON.stringify(current));
 
             neighbor = this.findNeighbor(current);
             for (var i in neighbor) {
@@ -142,7 +129,6 @@ function bFSPath(start, destination) {
                 }
                 path2.push(neighbor[i]);
                 // path.push(neighbor[i]);
-                // console.log(JSON.stringify(path[path.length - 1]));
                 queue.push(path2);
                 // path.pop();
             }
@@ -150,3 +136,8 @@ function bFSPath(start, destination) {
     }
     return queue;
 }
+
+// function printAvailable() {
+//     var items = Array.from(available);
+//     cc.log(JSON.stringify(items));
+// }

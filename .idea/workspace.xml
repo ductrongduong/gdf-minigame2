@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4d55f2b-12a8-484d-a811-f49e89a3e91c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Monster.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Utinity.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameSettings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameSettings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LoadAssets.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoadAssets.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Monster.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Monster.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utinity.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utinity.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -315,7 +313,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/Project/lgrc_project/client/HelloJavascript/src/framework/Framework.js" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../workspace/GameClientJS/team_2_client" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -549,19 +547,6 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" uri="http://localhost:63342/HelloJavascript/index.html" useBuiltInWebServerPort="true">
       <RunnerSettings RunnerId="JavascriptDebugRunner" />
       <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
@@ -756,6 +741,7 @@
       <workItem from="1653963628512" duration="1731000" />
       <workItem from="1653965518102" duration="20363000" />
       <workItem from="1654063491870" duration="15317000" />
+      <workItem from="1654096921479" duration="4269000" />
     </task>
     <servers />
   </component>
