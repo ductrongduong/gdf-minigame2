@@ -23,7 +23,7 @@ function findPath(start, destination) {
             }
             visited.add(locationTo1D);
 
-            neighbor = this.findNeighbor(current);
+            var neighbor = this.findNeighbor(current);
             for (var i in neighbor) {
                 var path2 = [];
                 for (var j in path) {
@@ -64,15 +64,18 @@ function getBox1D (box) {
     return box.row * fieldSize + box.col;
 }
 
-function putStone(row, col) {
+function putObstacle(row, col) {
     if (!available.has(row * fieldSize + col)) return false;
     let items = Array.from(available);
     var indexTo1D = getBox1D({row: row, col: col});
     available.delete(indexTo1D);
 
+    var obstacle = getRandomObstacle();
+    gameLayer.addTile(row, col, obstacle);
 
-    tileArray[row][col].setSpriteFrame(cc.spriteFrameCache.getSpriteFrame(  "rock.png"));
-    tileArray[row][col].val = "rock";
+    tileArray[row][col] = obstacle;
+    // tileArray[row][col].setSpriteFrame(cc.spriteFrameCache.getSpriteFrame(  "rock.png"));
+    // tileArray[row][col].val = "rock";
     currentRock++;
 
     //optimize code find path???
@@ -100,9 +103,9 @@ function getBoxInMatrix(event) {
     return {row : pickedRow, col : pickedCol};
 }
 
-function getMonsterInMatrix(event) {
-    var pickedRow = Math.floor(event.y / tileSize);
-    var pickedCol = Math.floor(event.x / tileSize);
+function getLocationMonsterInMatrix(loc) {
+    var pickedRow = Math.floor(loc.y / tileSize);
+    var pickedCol = Math.floor(loc.x / tileSize);
     return {row : pickedRow, col : pickedCol};
 }
 
@@ -141,3 +144,34 @@ function bFSPath(start, destination) {
 //     var items = Array.from(available);
 //     cc.log(JSON.stringify(items));
 // }
+
+function getRandomMonster() {
+    let random = Math.floor(Math.random() * Object.keys(typeOfMonster).length);
+    var monster;
+    switch (random) {
+        case typeOfMonster.DARK_GIANT:
+            monster = new DarkGiant();
+            break;
+        case typeOfMonster.FLY:
+            monster = new Fly();
+            break;
+        case typeOfMonster.LIGHT_GIANT:
+            monster = new LightGiant();
+            break;
+    }
+    return monster;
+}
+
+function getRandomObstacle() {
+    let random = Math.floor(Math.random() * Object.keys(typeOfObstacle).length);
+    var obstacle;
+    switch (random) {
+        case typeOfObstacle.ROCK:
+            obstacle = new Rock();
+            break;
+        case typeOfObstacle.TREE:
+            obstacle = new Tree();
+            break;
+    }
+    return obstacle;
+}

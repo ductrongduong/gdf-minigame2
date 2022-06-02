@@ -15,14 +15,25 @@
         "src/data/**/*.js",
         "src/framework/**/*.js",
         "src/gui/screen/**/*.js",
+        "src/monster/Monster.js",
+        "src/box/Box.js",
+        "src/box/Obstacle.js",
         "src/**/*.js"
     ],
     "jsList": [
+        "src/monster/Monster.js",
+        "src/box/Box.js",
+        "src/box/Obstacle.js",
+        "src/box/Land.js",
+        "src/box/Rock.js",
+        "src/box/Tree.js",
         "src/Game.js",
         "src/GameScene.js",
         "src/GameSettings.js",
         "src/LoadAssets.js",
-        "src/Monster.js",
+        "src/monster/DarkGiant.js",
+        "src/monster/Fly.js",
+        "src/monster/LightGiant.js",
         "src/Utinity.js"
     ]
 }

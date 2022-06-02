@@ -2,12 +2,19 @@
 var Game = cc.Layer.extend({
     init:function () {
         this._super();
-        cc.spriteFrameCache.addSpriteFrames("assets/art-minigame2.plist", "assets/art-minigame2.png");
+        cc.spriteFrameCache.addSpriteFrames("assets/art.plist", "assets/art.png");
         var backgroundLayer = cc.LayerGradient.create(cc.color(0x00,0x22,0x22,255), cc.color(0x22,0x00,0x44,255));
         this.addChild(backgroundLayer);
         globezLayer = cc.Layer.create();
 
+        var restartButton = new RestartButton();
+        this.addChild(restartButton);
+        restartButton.zIndex = 2;
 
+        // var possibleEnemies = [Fly, DarkGiant];
+        // let enemy = new possibleEnemies[Math.floor(Math.random() * possibleEnemies.length)]();
+        // var x = new enemy();
+        // console.log(JSON.stringify(x));
         cc.eventManager.addListener({
             event: cc.EventListener.MOUSE,
             onMouseDown: function(event){
@@ -23,7 +30,7 @@ var Game = cc.Layer.extend({
                         break;
                     }
                 }
-                if(putStone(locationInMatrix.row, locationInMatrix.col) && check){
+                if(putObstacle(locationInMatrix.row, locationInMatrix.col) && check){
                     // console.log(JSON.stringify(locationInMatrix));
                     arrowsLayer.clear();
                     gameLayer.drawPath();
@@ -48,10 +55,7 @@ var Game = cc.Layer.extend({
         this.drawPath();
         this.scheduleUpdate();
         this.schedule(this.addMonster,1.5);
-        // this.createLevel()
-        // cc.eventManager.addListener(touchListener, this);
-        // console.log(JSON.stringify(this.findPath({row: 0, col: 0}, {row: 6, col : 6})));
-        // this.drawPath();
+
     },
 
 
@@ -59,22 +63,25 @@ var Game = cc.Layer.extend({
         for (var i = 0; i < fieldSize; i++) {
             tileArray[i] = [];
             for (var j = 0; j < fieldSize; j++) {
-                this.addTile(i, j, "land");
+                // this.addTile(i, j, "land");
+                var land = new Land();
+                this.addTile(i, j, land);
             }
         }
-        // this.addTile(5, 5, "rock");
     },
 
 
-    addTile:function(row,col, type){
-        var spriteFrame = cc.spriteFrameCache.getSpriteFrame(type + ".png");
-        var sprite = cc.Sprite(spriteFrame);
-        sprite.val = type;
-        sprite.picked = false;
+    addTile:function(row,col, sprite){
+        // var spriteFrame = cc.spriteFrameCache.getSpriteFrame(type + ".png");
+        // var sprite = cc.Sprite(spriteFrame);
+        // sprite.val = type;
+        // sprite.picked = false;
+        if(tileArray[row][col] != null)
+            this.removeChild(tileArray[row][col]);
         globezLayer.addChild(sprite,0);
         sprite.setPosition(getBoxLocation(row, col));
         tileArray[row][col] = sprite;
-        tileArray[row][col].val = type;
+        // tileArray[row][col].val = type;
     },
 
 
@@ -89,42 +96,11 @@ var Game = cc.Layer.extend({
             var random = Math.floor(Math.random() * items.length);
             var row = Math.floor(items[random] / fieldSize);
             var col = items[random] % fieldSize;
-            putStone(row, col);
-            // tileArray[row][col].setSpriteFrame(cc.spriteFrameCache.getSpriteFrame(  "rock.png"));
-            // tileArray[row][col].val = "rock";
-            // currentRock++;
-            //
-            // //optimize code find path???
-            // var path = findPath({row : 0, col : 0}, {row : fieldSize - 1, col : fieldSize - 1});
-            // // console.log(JSON.stringify(path));
-            //
-            // if (path.length == 0) {
-            //     available.delete(items[random]);
-            //     tileArray[row][col].setSpriteFrame(cc.spriteFrameCache.getSpriteFrame(  "land.png"));
-            //     tileArray[row][col].val = "land";
-            //     currentRock--;
-            // }
-            // else {
-            //     available.delete(items[random]);
-            //     neighbor = findNeighbor({row : row, col : col});
-            //     for (var i in neighbor) {
-            //         var x = this.getBox1D(neighbor[i]);
-            //         available.delete(x);
-            //     }
-            // }
+            putObstacle(row, col);
         }
-        // for (var i = 0; i < fieldSize; i++) {
-        //     for (var j = 0; j < fieldSize; j++) {
-        //         console.log(JSON.stringify( tileArray[i][j].val));
-        //     }
-        // }
 
     },
 
-
-    // getBox1D:function (box) {
-    //     return box.row * fieldSize + box.col;
-    // },
 
     drawPath:function(){
         arrowsLayer.clear();
@@ -142,18 +118,30 @@ var Game = cc.Layer.extend({
 
     addMonster:function(event){
         numberOfMonster++;
-        // console.log(numberOfMonster);
-        var monster = new Monster();
+        var monster = getRandomMonster();
         this.addChild(monster, 1);
         monster.zIndex = 10;
-        // monster.runAction({row : 6, col : 6});
-        // var moveAction= cc.MoveTo.create(2, getBoxLocation(6, 6));
-        // this.runAction(moveAction);
-        // console.log("hello")
     }
 
-
 });
+
+var RestartButton = ccui.Button.extend({
+    ctor:function() {
+        this._super();
+        this.setTitleText("Restart game");
+        this.setPosition(cc.winSize.width / 2, cc.winSize.height * 9 / 10);
+        this.setTitleFontSize(20);
+        this.addClickEventListener(this.restartGame);
+    },
+    restartGame:function () {
+        gameLayer.removeFromParent();
+         available = new Set();
+         numberOfMonster = 0;
+         currentRock = 0;
+        tileArray = [];
+        cc.director.runScene(new GameScene());
+    }
+})
 
 
 

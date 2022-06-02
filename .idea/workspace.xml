@@ -5,10 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4d55f2b-12a8-484d-a811-f49e89a3e91c" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/box/Box.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/box/Land.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/box/Obstacle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/box/Rock.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/box/Tree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/monster/DarkGiant.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/monster/Fly.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/monster/LightGiant.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/art-minigame2.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/localize/en" beforeDir="false" afterPath="$PROJECT_DIR$/res/localize/en" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/localize/vi" beforeDir="false" afterPath="$PROJECT_DIR$/res/localize/vi" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameSettings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameSettings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Monster.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Monster.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LoadAssets.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoadAssets.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Monster.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/monster/Monster.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Utinity.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utinity.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -309,6 +322,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="FullScreen" value="false" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/Project/lgrc_project/client/HelloJavascript/src/framework/Framework.js" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -342,11 +356,11 @@
       <recent name="D:\Trong\team_2_client\assests" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Trong\gdf-minigame2\src\monster" />
       <recent name="D:\Trong\team_2_client\assests" />
       <recent name="D:\Trong\team_2_client\src" />
       <recent name="D:\Trong\team_2_client\src\modules\test" />
       <recent name="D:\Project\TemplateGame\src\framework" />
-      <recent name="D:\Project\lgrc_project\client\HelloJavascript\src\framework\gui" />
     </key>
   </component>
   <component name="RunManager" selected="JSBinding.Win32Debug">
@@ -547,6 +561,19 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" uri="http://localhost:63342/HelloJavascript/index.html" useBuiltInWebServerPort="true">
       <RunnerSettings RunnerId="JavascriptDebugRunner" />
       <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
@@ -742,6 +769,8 @@
       <workItem from="1653965518102" duration="20363000" />
       <workItem from="1654063491870" duration="15317000" />
       <workItem from="1654096921479" duration="4269000" />
+      <workItem from="1654134613505" duration="8566000" />
+      <workItem from="1654160087222" duration="3127000" />
     </task>
     <servers />
   </component>
