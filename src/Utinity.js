@@ -23,7 +23,7 @@ function findPath(start, destination) {
             }
             visited.add(locationTo1D);
 
-            var neighbor = this.findNeighbor(current);
+            var neighbor = this.findNeighborMonsterCantFly(current);
             for (var i in neighbor) {
                 var path2 = [];
                 for (var j in path) {
@@ -39,7 +39,7 @@ function findPath(start, destination) {
     return stack;
 }
 
-function findNeighbor (current) {
+function findNeighborMonsterCantFly (current) {
     var neighbor = [];
     if (current.row + 1 >= 0 && current.row + 1 < fieldSize)
         neighbor.push({row : current.row+1, col : current.col});
@@ -49,6 +49,36 @@ function findNeighbor (current) {
         neighbor.push({row : current.row, col : current.col + 1});
     if (current.col - 1 >= 0 && current.col - 1 < fieldSize)
         neighbor.push({row : current.row, col : current.col - 1});
+    return neighbor;
+}
+
+function findNeighborFly(current) {
+    var neighbor = [];
+    // if (current.row + 1 >= 0 && current.row + 1 < fieldSize)
+    //     neighbor.push({row : current.row+1, col : current.col});
+    // if (current.row - 1 >= 0 && current.row - 1 < fieldSize)
+    //     neighbor.push({row : current.row-1, col : current.col});
+    // if (current.col + 1 >= 0 && current.col + 1 < fieldSize)
+    //     neighbor.push({row : current.row, col : current.col + 1});
+    // if (current.col - 1 >= 0 && current.col - 1 < fieldSize)
+    //     neighbor.push({row : current.row, col : current.col - 1});
+    if (check({row : current.row + 1, col : current.col}))
+        neighbor.push({row : current.row+1, col : current.col});
+    if (check({row : current.row - 1, col : current.col}))
+        neighbor.push({row : current.row-1, col : current.col});
+    if (check({row : current.row, col : current.col + 1}))
+        neighbor.push({row : current.row, col : current.col + 1});
+    if (check({row : current.row , col : current.col - 1}))
+        neighbor.push({row : current.row, col : current.col - 1});
+    if (check({row : current.row + 1, col : current.col + 1}))
+        neighbor.push({row : current.row + 1, col : current.col + 1});
+    if (check({row : current.row - 1, col : current.col - 1}))
+        neighbor.push({row : current.row - 1, col : current.col - 1});
+    if (check({row : current.row + 1, col : current.col - 1}))
+        neighbor.push({row : current.row + 1, col : current.col - 1});
+    if (check({row : current.row - 1, col : current.col + 1}))
+        neighbor.push({row : current.row - 1, col : current.col + 1});
+
     return neighbor;
 }
 
@@ -88,7 +118,7 @@ function putObstacle(row, col) {
         return false;
     }
     else {
-        neighbor = findNeighbor({row : row, col : col});
+        neighbor = findNeighborMonsterCantFly({row : row, col : col});
         for (var i in neighbor) {
             var x = this.getBox1D(neighbor[i]);
             available.delete(x);
@@ -109,7 +139,7 @@ function getLocationMonsterInMatrix(loc) {
     return {row : pickedRow, col : pickedCol};
 }
 
-function bFSPath(start, destination) {
+function bFSPath(start, destination, findNeighbor) {
     const visited = new Set();
     var queue = [];
     queue.push([start]);
@@ -124,7 +154,7 @@ function bFSPath(start, destination) {
             }
             visited.add(locationTo1D);
 
-            neighbor = this.findNeighbor(current);
+            neighbor = findNeighbor(current);
             for (var i in neighbor) {
                 var path2 = [];
                 for (var j in path) {
@@ -174,4 +204,13 @@ function getRandomObstacle() {
             break;
     }
     return obstacle;
+}
+
+
+
+function check(position) {
+    if(position.row >= 0 && position.row < fieldSize && position.col >= 0 && position.col < fieldSize) {
+        return true;
+    }
+    return false;
 }

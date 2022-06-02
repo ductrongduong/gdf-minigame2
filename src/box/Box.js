@@ -6,4 +6,5 @@ var Box = cc.Sprite.extend({
 
     },
 
+
 });

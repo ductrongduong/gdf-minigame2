@@ -23,24 +23,33 @@ var Game = cc.Layer.extend({
             onMouseUp: function(event){
                 var locationInMatrix = getBoxInMatrix(event);
                 var check = false;
-                var path = bFSPath({row : 0, col : 0}, {row : fieldSize - 1, col : fieldSize - 1});
+                var path = bFSPath({row : 0, col : 0}, {row : fieldSize - 1, col : fieldSize - 1}, findNeighborMonsterCantFly);
                 for (var i in path) {
                     if (locationInMatrix.row == path[i].row && locationInMatrix.col == path[i].col) {
                         check = true;
                         break;
                     }
                 }
-                if(putObstacle(locationInMatrix.row, locationInMatrix.col) && check){
+                if(putObstacle(locationInMatrix.row, locationInMatrix.col)){
                     // console.log(JSON.stringify(locationInMatrix));
                     arrowsLayer.clear();
                     gameLayer.drawPath();
                     var childs = gameLayer.getChildren();
                     for (var i in childs) {
-                        if (childs[i] instanceof Monster) {
+                        if (childs[i] instanceof Fly) {
                             childs[i].action();
                         }
                     }
+                    if(check) {
+                        for (var i in childs) {
+                            if (childs[i] instanceof Monster) {
+                                childs[i].action();
+                            }
+                        }
+                    }
                 }
+
+
 
             }
         },this)
@@ -104,7 +113,7 @@ var Game = cc.Layer.extend({
 
     drawPath:function(){
         arrowsLayer.clear();
-        var path = bFSPath({row : 0, col : 0}, {row : fieldSize - 1, col : fieldSize - 1});
+        var path = bFSPath({row : 0, col : 0}, {row : fieldSize - 1, col : fieldSize - 1}, findNeighborMonsterCantFly);
         if(path.length>0){
             for(var i=1;i<path.length;i++){
                 arrowsLayer.drawSegment(new cc.p(path[i-1].col*tileSize+tileSize/2,

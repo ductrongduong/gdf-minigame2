@@ -5,24 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4d55f2b-12a8-484d-a811-f49e89a3e91c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/box/Box.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/box/Land.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/box/Obstacle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/box/Rock.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/box/Tree.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/monster/DarkGiant.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/monster/Fly.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/monster/LightGiant.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/art-minigame2.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/localize/en" beforeDir="false" afterPath="$PROJECT_DIR$/res/localize/en" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/localize/vi" beforeDir="false" afterPath="$PROJECT_DIR$/res/localize/vi" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameSettings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameSettings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LoadAssets.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoadAssets.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Monster.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/monster/Monster.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Utinity.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utinity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/box/Box.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/box/Box.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/monster/Fly.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/monster/Fly.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/monster/Monster.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/monster/Monster.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -770,7 +759,7 @@
       <workItem from="1654063491870" duration="15317000" />
       <workItem from="1654096921479" duration="4269000" />
       <workItem from="1654134613505" duration="8566000" />
-      <workItem from="1654160087222" duration="3127000" />
+      <workItem from="1654160087222" duration="6652000" />
     </task>
     <servers />
   </component>
