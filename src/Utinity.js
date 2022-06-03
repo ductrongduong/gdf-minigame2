@@ -8,78 +8,117 @@ function getBoxLocation(row, col) {
 //     return location;
 // }
 
-function findPath(start, destination) {
-    const visited = new Set();
-    var stack = [];
-    stack.push([start]);
+// function findPath(start, destination) {
+//     const visited = new Set();
+//     var stack = [];
+//     stack.push([start]);
+//
+//     while(stack.length > 0) {
+//         var path = stack.pop();
+//         var current = path[path.length - 1];
+//         var locationTo1D = current.row * fieldSize + current.col;
+//         if (!visited.has(locationTo1D) && tileArray[current.row][current.col].val == "land") {
+//             if (current.row == destination.row && current.col == destination.col){
+//                 console.log("hello ")
+//                 return path;
+//             }
+//             visited.add(locationTo1D);
+//
+//             var neighbor = this.findNeighborMonsterCantFly(current);
+//             for (var i in neighbor) {
+//                     var path2 = [];
+//                     for (var j in path) {
+//                         path2.push(path[j]);
+//                     }
+//                     path2.push(neighbor[i]);
+//                     // path.push(neighbor[i]);
+//                     stack.push(path2);
+//                     // path.pop();
+//
+//             }
+//         }
+//     }
+//     return stack;
+// }
 
-    while(stack.length > 0) {
-        var path = stack.pop();
+function bFSPath(start, destination, findNeighbor, obstacle) {
+    const visited = new Set();
+    var queue = [];
+    queue.push([start]);
+
+    while(queue.length > 0) {
+        var path = queue.shift();
         var current = path[path.length - 1];
         var locationTo1D = current.row * fieldSize + current.col;
-        if (!visited.has(locationTo1D) && tileArray[current.row][current.col].val == "land") {
+        if (!visited.has(locationTo1D) && (!(tileArray[current.row][current.col] instanceof obstacle))) {
             if (current.row == destination.row && current.col == destination.col){
                 return path;
             }
             visited.add(locationTo1D);
 
-            var neighbor = this.findNeighborMonsterCantFly(current);
+            neighbor = findNeighbor(current);
             for (var i in neighbor) {
-                var path2 = [];
-                for (var j in path) {
-                    path2.push(path[j]);
+                if ((!(tileArray[current.row][current.col] instanceof obstacle))){
+                    var path2 = [];
+                    for (var j in path) {
+                        path2.push(path[j]);
+                    }
+                    path2.push(neighbor[i]);
+                    // path.push(neighbor[i]);
+                    queue.push(path2);
+                    // path.pop();
                 }
-                path2.push(neighbor[i]);
-                // path.push(neighbor[i]);
-                stack.push(path2);
-                // path.pop();
+
             }
         }
     }
-    return stack;
+    return queue;
 }
 
 function findNeighborMonsterCantFly (current) {
     var neighbor = [];
-    if (current.row + 1 >= 0 && current.row + 1 < fieldSize)
-        neighbor.push({row : current.row+1, col : current.col});
-    if (current.row - 1 >= 0 && current.row - 1 < fieldSize)
-        neighbor.push({row : current.row-1, col : current.col});
-    if (current.col + 1 >= 0 && current.col + 1 < fieldSize)
+    if (checkPosition({row : current.row + 1, col : current.col}))
+        neighbor.push({row : current.row  +1, col : current.col});
+    if (checkPosition({row : current.row - 1, col : current.col}))
+        neighbor.push({row : current.row - 1, col : current.col});
+    if (checkPosition({row : current.row, col : current.col + 1}))
         neighbor.push({row : current.row, col : current.col + 1});
-    if (current.col - 1 >= 0 && current.col - 1 < fieldSize)
+    if (checkPosition({row : current.row, col : current.col - 1}))
         neighbor.push({row : current.row, col : current.col - 1});
     return neighbor;
 }
 
 function findNeighborFly(current) {
     var neighbor = [];
-    // if (current.row + 1 >= 0 && current.row + 1 < fieldSize)
-    //     neighbor.push({row : current.row+1, col : current.col});
-    // if (current.row - 1 >= 0 && current.row - 1 < fieldSize)
-    //     neighbor.push({row : current.row-1, col : current.col});
-    // if (current.col + 1 >= 0 && current.col + 1 < fieldSize)
-    //     neighbor.push({row : current.row, col : current.col + 1});
-    // if (current.col - 1 >= 0 && current.col - 1 < fieldSize)
-    //     neighbor.push({row : current.row, col : current.col - 1});
-    if (check({row : current.row + 1, col : current.col}))
+    if (checkPosition({row : current.row + 1, col : current.col}))
         neighbor.push({row : current.row+1, col : current.col});
-    if (check({row : current.row - 1, col : current.col}))
+    if (checkPosition({row : current.row - 1, col : current.col}))
         neighbor.push({row : current.row-1, col : current.col});
-    if (check({row : current.row, col : current.col + 1}))
+    if (checkPosition({row : current.row, col : current.col + 1}))
         neighbor.push({row : current.row, col : current.col + 1});
-    if (check({row : current.row , col : current.col - 1}))
+    if (checkPosition({row : current.row , col : current.col - 1}))
         neighbor.push({row : current.row, col : current.col - 1});
-    if (check({row : current.row + 1, col : current.col + 1}))
+    if (checkPosition({row : current.row + 1, col : current.col + 1}))
         neighbor.push({row : current.row + 1, col : current.col + 1});
-    if (check({row : current.row - 1, col : current.col - 1}))
+    if (checkPosition({row : current.row - 1, col : current.col - 1}))
         neighbor.push({row : current.row - 1, col : current.col - 1});
-    if (check({row : current.row + 1, col : current.col - 1}))
+    if (checkPosition({row : current.row + 1, col : current.col - 1}))
         neighbor.push({row : current.row + 1, col : current.col - 1});
-    if (check({row : current.row - 1, col : current.col + 1}))
+    if (checkPosition({row : current.row - 1, col : current.col + 1}))
         neighbor.push({row : current.row - 1, col : current.col + 1});
 
     return neighbor;
+}
+
+function checkPosition(position) {
+
+    if(position.row >= 0 && position.row < fieldSize && position.col >= 0 && position.col < fieldSize )
+        return true;
+    return false;
+
+    // if(position.row >= 0 && position.row < fieldSize && position.col >= 0 && position.col < fieldSize)
+    //     return true;
+    // return false;
 }
 
 function move(next) {
@@ -96,7 +135,6 @@ function getBox1D (box) {
 
 function putObstacle(row, col) {
     if (!available.has(row * fieldSize + col)) return false;
-    let items = Array.from(available);
     var indexTo1D = getBox1D({row: row, col: col});
     available.delete(indexTo1D);
 
@@ -109,11 +147,11 @@ function putObstacle(row, col) {
     currentRock++;
 
     //optimize code find path???
-    var path = findPath({row : 0, col : 0}, {row : fieldSize - 1, col : fieldSize - 1});
+    var path = bFSPath({row : 0, col : 0}, {row : fieldSize - 1, col : fieldSize - 1}, findNeighborMonsterCantFly, Obstacle);
 
     if (path.length == 0) {
-        tileArray[row][col].setSpriteFrame(cc.spriteFrameCache.getSpriteFrame(  "land.png"));
-        tileArray[row][col].val = "land";
+        var land = new Land();
+        gameLayer.addTile(row, col, land);
         currentRock--;
         return false;
     }
@@ -139,36 +177,7 @@ function getLocationMonsterInMatrix(loc) {
     return {row : pickedRow, col : pickedCol};
 }
 
-function bFSPath(start, destination, findNeighbor) {
-    const visited = new Set();
-    var queue = [];
-    queue.push([start]);
 
-    while(queue.length > 0) {
-        var path = queue.shift();
-        var current = path[path.length - 1];
-        var locationTo1D = current.row * fieldSize + current.col;
-        if (!visited.has(locationTo1D) && tileArray[current.row][current.col].val == "land") {
-            if (current.row == destination.row && current.col == destination.col){
-                return path;
-            }
-            visited.add(locationTo1D);
-
-            neighbor = findNeighbor(current);
-            for (var i in neighbor) {
-                var path2 = [];
-                for (var j in path) {
-                    path2.push(path[j]);
-                }
-                path2.push(neighbor[i]);
-                // path.push(neighbor[i]);
-                queue.push(path2);
-                // path.pop();
-            }
-        }
-    }
-    return queue;
-}
 
 // function printAvailable() {
 //     var items = Array.from(available);
@@ -204,13 +213,4 @@ function getRandomObstacle() {
             break;
     }
     return obstacle;
-}
-
-
-
-function check(position) {
-    if(position.row >= 0 && position.row < fieldSize && position.col >= 0 && position.col < fieldSize) {
-        return true;
-    }
-    return false;
 }

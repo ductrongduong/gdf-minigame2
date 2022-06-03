@@ -23,7 +23,7 @@ var Game = cc.Layer.extend({
             onMouseUp: function(event){
                 var locationInMatrix = getBoxInMatrix(event);
                 var check = false;
-                var path = bFSPath({row : 0, col : 0}, {row : fieldSize - 1, col : fieldSize - 1}, findNeighborMonsterCantFly);
+                var path = bFSPath({row : 0, col : 0}, {row : fieldSize - 1, col : fieldSize - 1}, findNeighborMonsterCantFly, Obstacle);
                 for (var i in path) {
                     if (locationInMatrix.row == path[i].row && locationInMatrix.col == path[i].col) {
                         check = true;
@@ -63,7 +63,7 @@ var Game = cc.Layer.extend({
         this.drawPath();
         this.drawPath();
         this.scheduleUpdate();
-        this.schedule(this.addMonster,1.5);
+        this.schedule(this.addMonster,.3);
 
     },
 
@@ -113,7 +113,7 @@ var Game = cc.Layer.extend({
 
     drawPath:function(){
         arrowsLayer.clear();
-        var path = bFSPath({row : 0, col : 0}, {row : fieldSize - 1, col : fieldSize - 1}, findNeighborMonsterCantFly);
+        var path = bFSPath({row : 0, col : 0}, {row : fieldSize - 1, col : fieldSize - 1}, findNeighborMonsterCantFly, Obstacle);
         if(path.length>0){
             for(var i=1;i<path.length;i++){
                 arrowsLayer.drawSegment(new cc.p(path[i-1].col*tileSize+tileSize/2,

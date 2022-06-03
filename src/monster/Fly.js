@@ -7,6 +7,6 @@ var Fly = Monster.extend({
     },
     findPathToTarget : function () {
         var vitri = getLocationMonsterInMatrix(this.getPosition());
-        this.pathToTarget = bFSPath(vitri, {row : fieldSize - 1, col : fieldSize - 1}, findNeighborFly);
+        this.pathToTarget = bFSPath(vitri, {row : fieldSize - 1, col : fieldSize - 1}, findNeighborFly, Tree);
     }
 })

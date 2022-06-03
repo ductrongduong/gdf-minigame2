@@ -16,7 +16,6 @@ var Monster = cc.Sprite.extend({
     },
 
     action:function (){
-        console.log("hello");
         this.stopAllActions();
         this.findPathToTarget();
         var arr = [];
@@ -32,6 +31,6 @@ var Monster = cc.Sprite.extend({
     findPathToTarget : function () {
         // console.log("hello")
         var vitri = getLocationMonsterInMatrix(this.getPosition());
-        this.pathToTarget = bFSPath(vitri, {row : fieldSize - 1, col : fieldSize - 1}, findNeighborMonsterCantFly);
+        this.pathToTarget = bFSPath(vitri, {row : fieldSize - 1, col : fieldSize - 1}, findNeighborMonsterCantFly, Obstacle);
     }
 });
