@@ -6,12 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="e4d55f2b-12a8-484d-a811-f49e89a3e91c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/art.plist" beforeDir="false" afterPath="$PROJECT_DIR$/assets/art.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/art.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/art.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/art.tps" beforeDir="false" afterPath="$PROJECT_DIR$/assets/art.tps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameSettings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameSettings.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Utinity.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utinity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/box/Obstacle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/box/Obstacle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/box/Tree.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/box/Tree.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/monster/Fly.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/monster/Fly.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/monster/DarkGiant.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/monster/DarkGiant.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/monster/Monster.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/monster/Monster.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -551,6 +552,17 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" uri="http://localhost:63342/HelloJavascript/index.html" useBuiltInWebServerPort="true">
       <RunnerSettings RunnerId="JavascriptDebugRunner" />
       <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
@@ -749,7 +761,10 @@
       <workItem from="1654134613505" duration="8566000" />
       <workItem from="1654160087222" duration="7137000" />
       <workItem from="1654167552035" duration="718000" />
-      <workItem from="1654235816645" duration="7291000" />
+      <workItem from="1654235816645" duration="14577000" />
+      <workItem from="1654480829705" duration="4393000" />
+      <workItem from="1654496016022" duration="5347000" />
+      <workItem from="1654501890631" duration="2150000" />
     </task>
     <servers />
   </component>

@@ -134,6 +134,7 @@ function getBox1D (box) {
 }
 
 function putObstacle(row, col) {
+
     if (!available.has(row * fieldSize + col)) return false;
     var indexTo1D = getBox1D({row: row, col: col});
     available.delete(indexTo1D);

@@ -11,8 +11,8 @@ var numberOfMonster = 0;
 var currentRock = 0;
 var typeOfMonster = {
     DARK_GIANT : 0,
-    LIGHT_GIANT : 1,
-    FLY : 2,
+    // LIGHT_GIANT : 1,
+    // FLY : 2,
 }
 var typeOfObstacle = {
     ROCK : 0,

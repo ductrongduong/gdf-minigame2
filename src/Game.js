@@ -63,7 +63,7 @@ var Game = cc.Layer.extend({
         this.drawPath();
         this.drawPath();
         this.scheduleUpdate();
-        this.schedule(this.addMonster,.3);
+        this.schedule(this.addMonster, 2);
 
     },
 

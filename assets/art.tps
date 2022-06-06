@@ -192,6 +192,76 @@
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
             <key type="filename">C:/Users/CPU60336-Local/Pictures/dark_giant.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0000.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0001.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0002.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0003.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0004.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0005.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0006.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0007.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0008.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0009.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0010.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0011.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0012.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0013.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0014.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0015.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0016.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0017.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0018.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0019.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0020.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0021.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0022.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0023.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0024.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0025.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0026.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0027.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0028.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0029.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0030.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0031.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0032.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0033.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0034.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0035.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0036.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0037.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0038.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0039.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0040.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0041.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0042.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0043.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0044.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0045.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0046.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0047.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0048.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0049.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0050.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0051.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0052.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0053.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0054.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0055.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0056.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0057.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0058.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0059.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0060.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0061.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0062.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0063.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0064.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0065.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0066.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0067.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0068.png</key>
+            <key type="filename">../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0069.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -290,6 +360,76 @@
             <filename>C:/Users/CPU60336-Local/Pictures/tree.png</filename>
             <filename>C:/Users/CPU60336-Local/Pictures/dark_giant.png</filename>
             <filename>C:/Users/CPU60336-Local/Pictures/light_giant.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0000.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0001.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0002.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0003.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0004.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0005.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0006.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0007.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0008.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0009.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0010.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0011.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0012.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0013.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0014.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0015.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0016.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0017.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0018.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0019.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0020.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0021.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0022.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0023.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0024.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0025.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0026.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0027.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0028.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0029.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0030.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0031.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0032.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0033.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0034.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0035.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0036.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0037.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0038.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0039.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0040.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0041.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0042.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0043.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0044.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0045.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0046.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0047.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0048.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0049.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0050.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0051.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0052.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0053.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0054.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0055.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0056.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0057.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0058.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0059.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0060.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0061.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0062.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0063.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0064.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0065.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0066.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0067.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0068.png</filename>
+            <filename>../../animation/Asset/monster/frame/dark_giant/monster_dark_giant_run_0069.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
